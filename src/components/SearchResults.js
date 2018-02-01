@@ -39,11 +39,11 @@ class SearchResults extends React.Component {
   }
 
   render() {
+    const results = this.props.candidates.data.results || [];
     return (
       <div id="searchResults">
-        <h2>{this.props.candidates.length} Candidates Found</h2>
-        {this.genCandidatesList(this.props.candidates)}
-
+        <h2>{results.length} Candidates Found</h2>
+        {this.genCandidatesList(results)}
       </div>
     );
   }
